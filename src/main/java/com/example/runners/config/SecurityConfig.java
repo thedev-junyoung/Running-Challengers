@@ -46,7 +46,7 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-
+        System.out.println("filterChain() in SecurityConfig");
         // token-based authentication settings
         http.csrf((auth) -> auth.disable());
         http.formLogin((auth) -> auth.disable());

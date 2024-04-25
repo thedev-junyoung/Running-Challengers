@@ -1,9 +1,15 @@
 package com.example.runners.repository;
 
-import com.example.runners.entity.UserEntity;
+import com.example.runners.entity.User;
+import org.springframework.data.domain.Example;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<UserEntity, Integer> {
+import java.util.List;
+
+public interface UserRepository extends JpaRepository<User, Integer> {
     Boolean existsByUsername(String username);
-    UserEntity findByUsername(String username);
+    User findByUsername(String username);
+
+    @Override
+    <S extends User> List<S> findAll(Example<S> example);
 }

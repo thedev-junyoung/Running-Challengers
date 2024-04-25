@@ -14,7 +14,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import java.util.Collection;
 import java.util.Iterator;
-
 public class LoginFilter extends UsernamePasswordAuthenticationFilter {
 
     private final AuthenticationManager authenticationManager;
@@ -27,7 +26,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
 
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
-
+        System.out.println("attemptAuthentication() in LoginFilter"+obtainUsername(request));
         String username = obtainUsername(request);
         String password = obtainPassword(request);
 
@@ -40,6 +39,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
 
     @Override
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authentication) {
+        System.out.println("successfulAuthentication() in LoginFilter");
 
         // create JWT token with user info
 
@@ -52,13 +52,14 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
         GrantedAuthority auth = iterator.next();
         String role = auth.getAuthority();
 
-        String token = jwt.createJwt(username, role, 60*60*10L);
-
+        String token = jwt.createJwt(username, role, 60*60*1000L);
+        System.out.println("JWT token 생성 :"+token);
         response.addHeader("Authorization", "Bearer " + token);
     }
 
     @Override
     protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException failed) {
+        System.out.println("unsuccessfulAuthentication() in LoginFilter");
         response.setStatus(401);
     }
 

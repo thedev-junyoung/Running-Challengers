@@ -55,7 +55,7 @@ public class JWT {
     }
 
     public String createJwt(String username, String role, Long expiredMs) {
-
+        System.out.println("createJwt() in JWT");
         return Jwts.builder()
                 .claim("username", username)
                 .claim("role", role)

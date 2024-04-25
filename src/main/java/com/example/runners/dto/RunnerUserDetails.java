@@ -1,6 +1,6 @@
 package com.example.runners.dto;
 
-import com.example.runners.entity.UserEntity;
+import com.example.runners.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -9,10 +9,10 @@ import java.util.Collection;
 
 public class RunnerUserDetails implements UserDetails {
 
-    private final UserEntity userEntity;
+    private final User user;
 
-    public RunnerUserDetails(UserEntity userEntity){
-        this.userEntity = userEntity;
+    public RunnerUserDetails(User user){
+        this.user = user;
     }
 
     @Override
@@ -23,7 +23,7 @@ public class RunnerUserDetails implements UserDetails {
         collection.add(new GrantedAuthority() {
             @Override
             public String getAuthority() {
-                return userEntity.getRole();
+                return user.getRole();
             }
         });
         return collection;
@@ -31,12 +31,12 @@ public class RunnerUserDetails implements UserDetails {
 
     @Override
     public String getPassword() {
-        return userEntity.getPassword();
+        return user.getPassword();
     }
 
     @Override
     public String getUsername() {
-        return userEntity.getUsername();
+        return user.getUsername();
     }
 
     @Override

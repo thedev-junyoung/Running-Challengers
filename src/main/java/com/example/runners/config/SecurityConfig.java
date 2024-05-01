@@ -53,7 +53,7 @@ public class SecurityConfig {
 
         // set a role for each pages
         http.authorizeHttpRequests((auth) -> auth
-                .requestMatchers("/", "/login", "/join").permitAll()
+                .requestMatchers("/", "/login", "/join", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
                 .requestMatchers("/admin").hasRole("ADMIN")
                 .anyRequest()
                 .authenticated()

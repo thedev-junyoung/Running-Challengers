@@ -1,7 +1,7 @@
 package com.example.runners.service;
 
-import com.example.runners.dto.RunnerUserDetails;
-import com.example.runners.dto.UpdateUserRequest;
+import com.example.runners.dto.user.RunnerUserDetails;
+import com.example.runners.dto.user.UpdateUserRequest;
 import com.example.runners.entity.User;
 import com.example.runners.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -40,10 +40,6 @@ public class UserService implements UserDetailsService {
         return userRepository.findById(id);
     }
 
-    public void deleteUser(int id) {
-        userRepository.deleteById(id);
-    }
-
     public List<User> getAllUsers() {
         System.out.println("getAllUsers()");
         return userRepository.findAll();
@@ -57,6 +53,10 @@ public class UserService implements UserDetailsService {
             Optional.ofNullable(updateRequest.getRole()).ifPresent(user::setRole);
             return userRepository.save(user);
         });
+    }
+
+    public void deleteUser(int id) {
+        userRepository.deleteById(id);
     }
 
 

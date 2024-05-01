@@ -1,6 +1,6 @@
 package com.example.runners.filters;
 
-import com.example.runners.dto.RunnerUserDetails;
+import com.example.runners.dto.user.RunnerUserDetails;
 import com.example.runners.entity.User;
 import com.example.runners.utils.JWT;
 import jakarta.servlet.FilterChain;
@@ -19,13 +19,11 @@ public class JWTFilter extends OncePerRequestFilter {
     private final JWT jwt;
 
     public JWTFilter(JWT jwt) {
-        System.out.println("JWTFilter() in JWTFilter");
         this.jwt = jwt;
     }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        System.out.println("doFilterInternal() in JWTFilter");
         //request에서 Authorization 헤더를 찾음
         String authorization= request.getHeader("Authorization");
         System.out.println("authorization:"+authorization);
@@ -40,7 +38,6 @@ public class JWTFilter extends OncePerRequestFilter {
         }
 
         String token = authorization.split(" ")[1];
-        System.out.println("token:"+token);
         //토큰 소멸 시간 검증
         if (jwt.isExpired(token)) {
 

@@ -1,6 +1,6 @@
 package com.example.runners.filters;
 
-import com.example.runners.dto.RunnerUserDetails;
+import com.example.runners.dto.user.RunnerUserDetails;
 import com.example.runners.utils.JWT;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.http.HttpServletRequest;

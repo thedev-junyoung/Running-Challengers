@@ -23,7 +23,8 @@ public class RunnerUserDetails implements UserDetails {
         collection.add(new GrantedAuthority() {
             @Override
             public String getAuthority() {
-                return user.getRole();
+                //return user.getRole();
+                return String.valueOf(user.getRole());
             }
         });
         return collection;

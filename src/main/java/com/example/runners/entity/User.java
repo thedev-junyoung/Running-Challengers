@@ -16,10 +16,15 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private int id;
-    private String username;
-    private String password;
-    private String role;
     private String email;
+    private String password;
+    private String username;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
+    private String profileMsg;
+    private String profileImg; //
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
 

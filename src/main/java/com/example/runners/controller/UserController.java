@@ -1,5 +1,6 @@
 package com.example.runners.controller;
 
+import com.example.runners.dto.user.UserDTO;
 import com.example.runners.dto.user.JoinRequest;
 import com.example.runners.dto.user.UpdateUserRequest;
 import com.example.runners.entity.User;
@@ -37,13 +38,13 @@ public class UserController {
 
 
     @GetMapping("/user/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable int id) {
+    public ResponseEntity<UserDTO> getUserById(@PathVariable int id) {
         return userService.getUserById(id)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
     @GetMapping("/users")
-    public ResponseEntity<List<User>> getAllUsers() {
+    public ResponseEntity<List<UserDTO>> getAllUsers() {
         return ResponseEntity.ok(userService.getAllUsers());
     }
 

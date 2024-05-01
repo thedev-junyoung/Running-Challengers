@@ -1,6 +1,7 @@
 package com.example.runners.service;
 
 import com.example.runners.dto.user.JoinRequest;
+import com.example.runners.entity.Role;
 import com.example.runners.entity.User;
 import com.example.runners.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -28,7 +29,11 @@ public class JoinService {
         String password = joinRequest.getPassword();
         user.setUsername(joinRequest.getUsername());
         user.setPassword(bCryptPasswordEncoder.encode(password));
-        user.setRole("ADMIN"); // 3. ADMIN / USER 권한 추가
+        if(joinRequest.getUsername().equals("admin") || joinRequest.getUsername().equals("junyoung")){
+            user.setRole(Role.ADMIN); // 3. ADMIN / USER 권한 추가
+        }else {
+            user.setRole(Role.USER); //
+        }
         System.out.println("user:"+user);
         userRepository.save(user);
     }

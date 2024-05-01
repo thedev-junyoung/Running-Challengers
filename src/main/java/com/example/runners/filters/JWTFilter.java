@@ -1,6 +1,7 @@
 package com.example.runners.filters;
 
 import com.example.runners.dto.user.RunnerUserDetails;
+import com.example.runners.entity.Role;
 import com.example.runners.entity.User;
 import com.example.runners.utils.JWT;
 import jakarta.servlet.FilterChain;
@@ -56,7 +57,7 @@ public class JWTFilter extends OncePerRequestFilter {
         User user = new User();
         user.setUsername(username);
         user.setPassword("temppassword");
-        user.setRole(role);
+        user.setRole(Role.valueOf(role));
 
         RunnerUserDetails customUserDetails = new RunnerUserDetails(user);
 

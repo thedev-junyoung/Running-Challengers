@@ -1,6 +1,6 @@
 package com.example.runners.config;
 
-import com.example.runners.etc.ResourceNotFoundException;
+import com.example.runners.error.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;

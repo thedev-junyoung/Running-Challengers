@@ -1,4 +1,4 @@
-package com.example.runners.aspect;
+package com.example.runners.error;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

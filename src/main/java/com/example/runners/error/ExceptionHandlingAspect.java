@@ -1,4 +1,4 @@
-package com.example.runners.aspect;
+package com.example.runners.error;
 
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;

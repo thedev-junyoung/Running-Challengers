@@ -14,43 +14,30 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/user")  // 모든 메소드를 /users 경로 아래로 이동
 public class UserController {
-    private final JoinService joinService;
     private final UserService userService;
 
     private static final Logger logger = LoggerFactory.getLogger(ChallengeController.class);
 
     public UserController(JoinService joinService, UserService userService) {
-        this.joinService = joinService;
         this.userService = userService;
     }
 
-    @PostMapping("/join")
-    public String join(@RequestBody JoinRequest joinRequest){
-        joinService.join(joinRequest);
-        return "join complete!";
-    }
-    @GetMapping("/join")
-    public String join(){
-        return "get join view";
-    }
-
-
-
-    @GetMapping("/user/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<UserDTO> getUserById(@PathVariable int id) {
         return userService.getUserById(id)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
-    @GetMapping("/users")
+    @GetMapping("/")
     public ResponseEntity<List<UserDTO>> getAllUsers() {
         return ResponseEntity.ok(userService.getAllUsers());
     }
 
 
 
-    @PutMapping("/user/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<User> updateUser(@PathVariable int id, @RequestBody UpdateUserRequest updateRequest) {
         return userService.updateUser(id, updateRequest)
                 .map(ResponseEntity::ok)
@@ -59,7 +46,7 @@ public class UserController {
 
 
 
-    @DeleteMapping("/user/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable int id) {
         userService.deleteUser(id);
         return ResponseEntity.ok().build();

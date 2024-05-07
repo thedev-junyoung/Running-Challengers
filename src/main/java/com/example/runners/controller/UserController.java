@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/user")  // 모든 메소드를 /users 경로 아래로 이동
+@RequestMapping("/users")  // 모든 메소드를 /users 경로 아래로 이동
 public class UserController {
     private final UserService userService;
 

@@ -1,7 +1,7 @@
 package com.example.runners.service;
 
 import com.example.runners.dto.user.JoinRequest;
-import com.example.runners.entity.Role;
+import com.example.runners.type.Role;
 import com.example.runners.entity.User;
 import com.example.runners.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

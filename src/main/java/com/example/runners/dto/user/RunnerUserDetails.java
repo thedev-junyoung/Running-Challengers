@@ -37,8 +37,9 @@ public class RunnerUserDetails implements UserDetails {
 
     @Override
     public String getUsername() {
-        return user.getUsername();
+        return user.getEmail();
     }
+
 
     @Override
     public boolean isAccountNonExpired() {

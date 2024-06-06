@@ -27,7 +27,7 @@ public class ChallengeService {
     private void configureModelMapper() {
         // User 객체를 사용자 ID로 매핑
         modelMapper.typeMap(Challenge.class, ChallengeDTO.class).addMappings(mapper ->
-                mapper.map(src -> src.getCreatedBy().getId(), ChallengeDTO::setCreatedBy)
+                mapper.map(src -> src.getCreatedBy().getUserId(), ChallengeDTO::setCreatedBy)
         );
     }
     public void saveChallenge(ChallengeDTO challengeDTO) {

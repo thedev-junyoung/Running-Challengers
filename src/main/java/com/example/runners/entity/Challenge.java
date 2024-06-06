@@ -44,7 +44,7 @@ public class Challenge {
     private Date updatedAt;
 
     @OneToMany(mappedBy = "challenge")
-    private Set<ChallengeParticipant> participants; // 참가자
+    private Set<ChallengeUser> participants; // 참가자
 
 
     // @PrePersist 및 @PreUpdate:

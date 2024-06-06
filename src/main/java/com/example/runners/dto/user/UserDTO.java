@@ -1,6 +1,6 @@
 package com.example.runners.dto.user;
 
-import com.example.runners.entity.Role;
+import com.example.runners.type.Role;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -19,5 +19,5 @@ public class UserDTO implements Serializable {
     String profileMsg;
     String profileImg;
     Date createdAt;
-    Set<ChallengeParticipantDTO> challenges;
+    Set<ChallengeUserDTO> challenges;
 }

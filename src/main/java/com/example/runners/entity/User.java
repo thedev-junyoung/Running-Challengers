@@ -1,11 +1,11 @@
 package com.example.runners.entity;
 
+import com.example.runners.type.Role;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
-import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -14,10 +14,13 @@ import java.util.Set;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private int id;
+    @Column(name = "user_id", nullable = false)
+    private int userId;
+    @Column(name = "email", nullable = false)
     private String email;
+    @Column(name = "password", nullable = false)
     private String password;
+    @Column(name = "username", nullable = false)
     private String username;
 
     @Enumerated(EnumType.STRING)
@@ -31,8 +34,22 @@ public class User {
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt;
 
-    @OneToMany(mappedBy = "user")
-    private Set<ChallengeParticipant> challenges;
+    // 1:N 관계,
+    // FetchType.LAZY: 실제로 해당 필드가 필요할 때까지 로드되지 않음.
+    // 유저는 여러개의 챌린지에 참여할 수 있다.
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<ChallengeUser> challenges;
+
+    @OneToMany(mappedBy = "createdBy", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Challenge> createdChallenges;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<ChallengeReply> challengeReplies;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<RunningRecord> runningRecords;
+
+
 
     @PrePersist
     protected void onCreate() {

@@ -1,16 +1,16 @@
 package com.example.runners.dto.user;
 
+import com.example.runners.entity.ChallengeUser;
 import lombok.Data;
-import lombok.Value;
 
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * DTO for {@link com.example.runners.entity.ChallengeParticipant}
+ * DTO for {@link ChallengeUser}
  */
 @Data
-public class ChallengeParticipantDTO implements Serializable {
+public class ChallengeUserDTO implements Serializable {
     int id;
     private int challengeId;
     private int userId;

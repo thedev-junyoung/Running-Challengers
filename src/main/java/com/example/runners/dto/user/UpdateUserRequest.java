@@ -1,6 +1,5 @@
 package com.example.runners.dto.user;
 
-import com.example.runners.entity.Role;
 import lombok.Data;
 
 @Data

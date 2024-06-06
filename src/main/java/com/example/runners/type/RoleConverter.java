@@ -1,5 +1,6 @@
-package com.example.runners.entity;
+package com.example.runners.type;
 
+import com.example.runners.type.Role;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 

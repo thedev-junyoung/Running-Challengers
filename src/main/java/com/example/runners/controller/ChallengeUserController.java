@@ -1,8 +1,8 @@
 package com.example.runners.controller;
 
 
-import com.example.runners.dto.user.ChallengeParticipantDTO;
-import com.example.runners.service.ChallengeParticipantService;
+import com.example.runners.dto.user.ChallengeUserDTO;
+import com.example.runners.service.ChallengeUserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -11,13 +11,13 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/challenges/{id}/participant")
-public class ChallengeParticipantController {
+public class ChallengeUserController {
 
-    private final ChallengeParticipantService participantService;
+    private final ChallengeUserService participantService;
 
 
 
-    public ChallengeParticipantController(ChallengeParticipantService participantService) {
+    public ChallengeUserController(ChallengeUserService participantService) {
         this.participantService = participantService;
     }
 
@@ -50,7 +50,7 @@ public class ChallengeParticipantController {
      */
     @GetMapping("/list")
     public ResponseEntity<?> getParticipants(@PathVariable int id) {
-        List<ChallengeParticipantDTO> participants = participantService.getParticipants(id);
+        List<ChallengeUserDTO> participants = participantService.getParticipants(id);
         return ResponseEntity.ok(participants);
     }
 

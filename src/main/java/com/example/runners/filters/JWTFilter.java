@@ -1,7 +1,7 @@
 package com.example.runners.filters;
 
 import com.example.runners.dto.user.RunnerUserDetails;
-import com.example.runners.entity.Role;
+import com.example.runners.type.Role;
 import com.example.runners.entity.User;
 import com.example.runners.utils.JWT;
 import jakarta.servlet.FilterChain;

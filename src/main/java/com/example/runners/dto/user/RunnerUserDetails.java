@@ -37,7 +37,9 @@ public class RunnerUserDetails implements UserDetails {
 
     @Override
     public String getUsername() {
-        return user.getEmail();
+        System.out.println("getUsername()");
+        return user.getUsername();
+//        return user.getEmail();
     }
 
 

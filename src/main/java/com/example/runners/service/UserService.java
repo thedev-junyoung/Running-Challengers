@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -30,19 +31,19 @@ public class UserService implements UserDetailsService {
         this.modelMapper = modelMapper;
     }
 
-
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 
-        User user = userRepository.findByUsername(username);
+        User user = userRepository.findByEmail(email);
 
         if(user != null){
             System.out.println("user !=null");
+            System.out.println("user.getEmail()"+user.getEmail());
             return new RunnerUserDetails(user);
         }
         //return null;
         System.out.println("User not found with username");
-        throw new UsernameNotFoundException("User not found with username: " + username);
+        throw new UsernameNotFoundException("User not found with username: " + email);
     }
 
     public Optional<UserDTO> getUserById(int id) {

@@ -26,17 +26,20 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
 
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
-        System.out.println("attemptAuthentication() in LoginFilter"+obtainUsername(request));
-        String username = obtainUsername(request);
+        System.out.println("attemptAuthentication() in LoginFilter"+obtainEmail(request));
+        String username = obtainEmail(request);
         String password = obtainPassword(request);
 
         System.out.println(username + " login!");
 
         UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(username, password, null);
-
+        System.out.println("authToken:"+authToken);
         return authenticationManager.authenticate(authToken);
     }
 
+    private String obtainEmail(HttpServletRequest request) {
+        return request.getParameter("email");
+    }
     @Override
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authentication) {
         System.out.println("successfulAuthentication() in LoginFilter");

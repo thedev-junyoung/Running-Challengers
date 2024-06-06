@@ -12,12 +12,12 @@ import java.util.Set;
  */
 @Data
 public class UserDTO implements Serializable {
-    int id;
+    Long userId;
     String email;
     String username;
     Role role;
     String profileMsg;
     String profileImg;
     Date createdAt;
-    Set<ChallengeUserDTO> challenges;
+    //Set<ChallengeUserDTO> challenges;
 }

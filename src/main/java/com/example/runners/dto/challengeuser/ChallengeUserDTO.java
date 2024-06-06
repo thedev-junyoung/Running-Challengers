@@ -1,4 +1,4 @@
-package com.example.runners.dto.user;
+package com.example.runners.dto.challengeuser;
 
 import com.example.runners.entity.ChallengeUser;
 import lombok.Data;

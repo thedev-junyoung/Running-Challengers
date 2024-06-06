@@ -1,7 +1,7 @@
 package com.example.runners.controller;
 
 
-import com.example.runners.dto.user.ChallengeUserDTO;
+import com.example.runners.dto.challengeuser.ChallengeUserDTO;
 import com.example.runners.service.ChallengeUserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

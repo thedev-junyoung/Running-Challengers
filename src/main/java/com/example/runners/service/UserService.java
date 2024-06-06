@@ -46,8 +46,8 @@ public class UserService implements UserDetailsService {
         throw new UsernameNotFoundException("User not found with username: " + email);
     }
 
-    public Optional<UserDTO> getUserById(int id) {
-
+    public Optional<UserDTO> getUserById(Long id) {
+        System.out.println("getUserById:"+userRepository.findById(id).map(user -> modelMapper.map(user, UserDTO.class)));
         return userRepository.findById(id)
                 .map(user -> modelMapper.map(user, UserDTO.class));
     }
@@ -59,7 +59,7 @@ public class UserService implements UserDetailsService {
     }
 
 
-    public Optional<User> updateUser(int id, UpdateUserRequest updateRequest) {
+    public Optional<User> updateUser(long id, UpdateUserRequest updateRequest) {
         return userRepository.findById(id).map(user -> {
             Optional.ofNullable(updateRequest.getUsername()).ifPresent(user::setUsername);
             // 비밀번호를 먼저 확인하고 암호화
@@ -74,7 +74,7 @@ public class UserService implements UserDetailsService {
         });
     }
 
-    public void deleteUser(int id) {
+    public void deleteUser(long id) {
         userRepository.deleteById(id);
     }
 

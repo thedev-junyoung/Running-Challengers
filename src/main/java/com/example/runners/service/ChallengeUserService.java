@@ -1,6 +1,6 @@
 package com.example.runners.service;
 
-import com.example.runners.dto.user.ChallengeUserDTO;
+import com.example.runners.dto.challengeuser.ChallengeUserDTO;
 import com.example.runners.entity.Challenge;
 import com.example.runners.entity.ChallengeUser;
 import com.example.runners.entity.User;
@@ -41,7 +41,7 @@ public class ChallengeUserService {
         });
     }
     // 참가를 추가하는 메서드
-    public ChallengeUserDTO addParticipant(int challengeId, int userId) {
+    public ChallengeUserDTO addParticipant(int challengeId, long userId) {
         Challenge challenge = challengeRepository.findById(challengeId)
                 .orElseThrow(() -> new IllegalArgumentException("Challenge not found with ID: " + challengeId));
         User user = userRepository.findById(userId)

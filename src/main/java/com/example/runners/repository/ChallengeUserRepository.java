@@ -8,9 +8,9 @@ import org.springframework.data.repository.query.Param;
 import java.util.Optional;
 import java.util.List;
 
-public interface ChallengeUserRepository extends JpaRepository<ChallengeUser, Integer> {
+public interface ChallengeUserRepository extends JpaRepository<ChallengeUser, Long> {
     List<ChallengeUser> findByChallengeId(int challengeId);
-    @Query("SELECT p FROM ChallengeUser p WHERE p.challenge.id = :challengeId AND p.user.id = :userId")
-    Optional<ChallengeUser> findByChallengeIdAndUserId(@Param("challengeId") int challengeId, @Param("userId") int userId);
+    @Query("SELECT p FROM ChallengeUser p WHERE p.challenge.id = :challengeId AND p.user.userId = :userId")
+    Optional<ChallengeUser> findByChallengeIdAndUserId(@Param("challengeId") int challengeId, @Param("userId") long userId);
 
 }

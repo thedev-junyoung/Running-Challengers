@@ -1,6 +1,7 @@
 package com.example.runners.controller;
 
 import com.example.runners.dto.user.JoinRequest;
+import com.example.runners.dto.user.RunnerUserDetails;
 import com.example.runners.repository.UserRepository;
 import com.example.runners.service.JoinService;
 import org.springframework.security.core.Authentication;
@@ -29,6 +30,7 @@ public class MainController {
         if (auth == null || !auth.isAuthenticated()) {
             return "User is not authenticated";
         }
+        RunnerUserDetails runnerUserDetails=(RunnerUserDetails)auth.getPrincipal();
         String name = auth.getName();
         return "test page : " + name;
     }

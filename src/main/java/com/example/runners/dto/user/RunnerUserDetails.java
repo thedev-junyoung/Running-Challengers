@@ -1,6 +1,8 @@
 package com.example.runners.dto.user;
 
 import com.example.runners.entity.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -8,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class RunnerUserDetails implements UserDetails {
-
+    private static final Logger logger = LoggerFactory.getLogger(RunnerUserDetails.class);
     private final User user;
 
     public RunnerUserDetails(User user){
@@ -37,9 +39,8 @@ public class RunnerUserDetails implements UserDetails {
 
     @Override
     public String getUsername() {
-        System.out.println("getUsername()");
-        return user.getUsername();
-//        return user.getEmail();
+        logger.info("user.getEmail()"+user.getEmail());
+        return user.getEmail();
     }
 
 

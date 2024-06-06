@@ -1,0 +1,253 @@
+16:05:45.099 [restartedMain] INFO  c.example.runners.RunnersApplication [StartupInfoLogger.java:50] - Starting RunnersApplication using Java 17.0.7 with PID 8619 (/Users/dev_june/Library/Mobile Documents/com~apple~CloudDocs/workspace/Spring-project/build/classes/java/main started by dev_june in /Users/dev_june/Library/Mobile Documents/com~apple~CloudDocs/workspace/Spring-project)
+16:05:45.101 [restartedMain] INFO  c.example.runners.RunnersApplication [SpringApplication.java:655] - No active profile set, falling back to 1 default profile: "default"
+16:05:45.123 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:252] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+16:05:45.123 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:252] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+16:05:45.532 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:143] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:05:45.566 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:211] - Finished Spring Data repository scanning in 30 ms. Found 3 JPA repository interfaces.
+16:05:45.969 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java:111] - Tomcat initialized with port 8080 (http)
+16:05:45.974 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+16:05:45.975 [restartedMain] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java:173] - Starting service [Tomcat]
+16:05:45.975 [restartedMain] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/10.1.20]
+16:05:46.001 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+16:05:46.001 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:296] - Root WebApplicationContext: initialization completed in 877 ms
+16:05:46.104 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:05:46.129 [restartedMain] INFO  org.hibernate.Version [Version.java:44] - HHH000412: Hibernate ORM core version 6.5.0.CR2
+16:05:46.150 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [RegionFactoryInitiator.java:50] - HHH000026: Second-level cache disabled
+16:05:46.275 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [SpringPersistenceUnitInfo.java:87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:05:46.290 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:109] - HikariPool-1 - Starting...
+16:05:46.459 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [HikariPool.java:554] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37e2f86b
+16:05:46.460 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:122] - HikariPool-1 - Start completed.
+16:05:46.495 [restartedMain] WARN  org.hibernate.orm.deprecation [DialectFactoryImpl.java:153] - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+16:05:47.038 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [JtaPlatformInitiator.java:59] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+16:05:47.108 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:05:47.516 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory [QueryEnhancerFactory.java:49] - Hibernate is in classpath; If applicable, HQL parser will be used.
+16:05:47.842 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:236] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:05:48.086 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain [DefaultSecurityFilterChain.java:54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@27b4c01d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ab17a69, org.springframework.security.web.context.SecurityContextHolderFilter@177a4f60, org.springframework.security.web.header.HeaderWriterFilter@7d90b80a, org.springframework.web.filter.CorsFilter@a440dc1, org.springframework.security.web.authentication.logout.LogoutFilter@5232ae23, com.example.runners.filters.JWTFilter@37fcad0d, com.example.runners.filters.LoginFilter@36c927c7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@84f9dd8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d41691b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67fa7145, org.springframework.security.web.session.SessionManagementFilter@a9fad88, org.springframework.security.web.access.ExceptionTranslationFilter@28b90162, org.springframework.security.web.access.intercept.AuthorizationFilter@17a8f1b7]
+16:05:48.323 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] - LiveReload server is running on port 35729
+16:05:48.344 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+16:05:48.352 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java:243] - Tomcat started on port 8080 (http) with context path '/'
+16:05:48.361 [restartedMain] INFO  c.example.runners.RunnersApplication [StartupInfoLogger.java:56] - Started RunnersApplication in 3.498 seconds (process running for 3.776)
+16:05:49.437 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:05:49.438 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:532] - Initializing Servlet 'dispatcherServlet'
+16:05:49.439 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:554] - Completed initialization in 1 ms
+16:07:01.496 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:650] - Closing JPA EntityManagerFactory for persistence unit 'default'
+16:07:01.498 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:349] - HikariPool-1 - Shutdown initiated...
+16:07:01.515 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:351] - HikariPool-1 - Shutdown completed.
+16:09:01.055 [restartedMain] INFO  c.example.runners.RunnersApplication [StartupInfoLogger.java:50] - Starting RunnersApplication using Java 17.0.7 with PID 8678 (/Users/dev_june/Library/Mobile Documents/com~apple~CloudDocs/workspace/Spring-project/build/classes/java/main started by dev_june in /Users/dev_june/Library/Mobile Documents/com~apple~CloudDocs/workspace/Spring-project)
+16:09:01.057 [restartedMain] INFO  c.example.runners.RunnersApplication [SpringApplication.java:655] - No active profile set, falling back to 1 default profile: "default"
+16:09:01.082 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:252] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+16:09:01.083 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:252] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+16:09:01.542 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:143] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:09:01.578 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:211] - Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.
+16:09:01.996 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java:111] - Tomcat initialized with port 8080 (http)
+16:09:02.003 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+16:09:02.004 [restartedMain] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java:173] - Starting service [Tomcat]
+16:09:02.004 [restartedMain] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/10.1.20]
+16:09:02.032 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+16:09:02.033 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:296] - Root WebApplicationContext: initialization completed in 950 ms
+16:09:02.144 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:09:02.172 [restartedMain] INFO  org.hibernate.Version [Version.java:44] - HHH000412: Hibernate ORM core version 6.5.0.CR2
+16:09:02.195 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [RegionFactoryInitiator.java:50] - HHH000026: Second-level cache disabled
+16:09:02.323 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [SpringPersistenceUnitInfo.java:87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:09:02.337 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:109] - HikariPool-1 - Starting...
+16:09:02.512 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [HikariPool.java:554] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e7182b
+16:09:02.513 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:122] - HikariPool-1 - Start completed.
+16:09:02.550 [restartedMain] WARN  org.hibernate.orm.deprecation [DialectFactoryImpl.java:153] - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+16:09:03.116 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [JtaPlatformInitiator.java:59] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+16:09:03.186 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:09:03.620 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory [QueryEnhancerFactory.java:49] - Hibernate is in classpath; If applicable, HQL parser will be used.
+16:09:03.971 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:236] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:09:04.229 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain [DefaultSecurityFilterChain.java:54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4da319c7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@42dee693, org.springframework.security.web.context.SecurityContextHolderFilter@945e66, org.springframework.security.web.header.HeaderWriterFilter@5e72fc57, org.springframework.web.filter.CorsFilter@913de53, org.springframework.security.web.authentication.logout.LogoutFilter@7ea3a0be, com.example.runners.filters.JWTFilter@10e7b0bf, com.example.runners.filters.LoginFilter@45dfee45, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@402be0dc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6242d628, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@70806213, org.springframework.security.web.session.SessionManagementFilter@1c2f32fc, org.springframework.security.web.access.ExceptionTranslationFilter@d87b556, org.springframework.security.web.access.intercept.AuthorizationFilter@51f35ead]
+16:09:04.463 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] - LiveReload server is running on port 35729
+16:09:04.481 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+16:09:04.490 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java:243] - Tomcat started on port 8080 (http) with context path '/'
+16:09:04.498 [restartedMain] INFO  c.example.runners.RunnersApplication [StartupInfoLogger.java:56] - Started RunnersApplication in 3.695 seconds (process running for 3.987)
+16:09:04.692 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:09:04.692 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:532] - Initializing Servlet 'dispatcherServlet'
+16:09:04.693 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:554] - Completed initialization in 1 ms
+16:09:04.706 [http-nio-8080-exec-1] INFO  c.example.runners.filters.JWTFilter [JWTFilter.java:40] - authorization:Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRoZWRldi5qdW55b3VuZ0BnbWFpbC5jb20iLCJyb2xlIjoiVVNFUiIsImlhdCI6MTcxNzY1NDk5MCwiZXhwIjoxNzE3NjU4NTkwfQ.wWyidV7Z1BE_EOuUdcb8f6AfpP_SK3CwUqkn2y731JU
+16:11:26.959 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:650] - Closing JPA EntityManagerFactory for persistence unit 'default'
+16:11:26.961 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:349] - HikariPool-1 - Shutdown initiated...
+16:11:26.986 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:351] - HikariPool-1 - Shutdown completed.
+16:11:28.870 [restartedMain] INFO  c.example.runners.RunnersApplication [StartupInfoLogger.java:50] - Starting RunnersApplication using Java 17.0.7 with PID 8729 (/Users/dev_june/Library/Mobile Documents/com~apple~CloudDocs/workspace/Spring-project/build/classes/java/main started by dev_june in /Users/dev_june/Library/Mobile Documents/com~apple~CloudDocs/workspace/Spring-project)
+16:11:28.871 [restartedMain] INFO  c.example.runners.RunnersApplication [SpringApplication.java:655] - No active profile set, falling back to 1 default profile: "default"
+16:11:28.894 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:252] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+16:11:28.894 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:252] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+16:11:29.325 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:143] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:11:29.361 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:211] - Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+16:11:29.758 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java:111] - Tomcat initialized with port 8080 (http)
+16:11:29.764 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+16:11:29.765 [restartedMain] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java:173] - Starting service [Tomcat]
+16:11:29.765 [restartedMain] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/10.1.20]
+16:11:29.790 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+16:11:29.790 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:296] - Root WebApplicationContext: initialization completed in 896 ms
+16:11:29.890 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:11:29.914 [restartedMain] INFO  org.hibernate.Version [Version.java:44] - HHH000412: Hibernate ORM core version 6.5.0.CR2
+16:11:29.935 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [RegionFactoryInitiator.java:50] - HHH000026: Second-level cache disabled
+16:11:30.059 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [SpringPersistenceUnitInfo.java:87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:11:30.074 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:109] - HikariPool-1 - Starting...
+16:11:30.247 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [HikariPool.java:554] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@126b8c62
+16:11:30.248 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:122] - HikariPool-1 - Start completed.
+16:11:30.284 [restartedMain] WARN  org.hibernate.orm.deprecation [DialectFactoryImpl.java:153] - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+16:11:30.832 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [JtaPlatformInitiator.java:59] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+16:11:30.908 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:11:31.340 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory [QueryEnhancerFactory.java:49] - Hibernate is in classpath; If applicable, HQL parser will be used.
+16:11:31.630 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:236] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:11:31.848 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain [DefaultSecurityFilterChain.java:54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@66b6251d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27eae689, org.springframework.security.web.context.SecurityContextHolderFilter@58822555, org.springframework.security.web.header.HeaderWriterFilter@1494a345, org.springframework.web.filter.CorsFilter@5594516c, org.springframework.security.web.authentication.logout.LogoutFilter@591ce21b, com.example.runners.filters.JWTFilter@2f257cc3, com.example.runners.filters.LoginFilter@786c3af7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42040d56, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4bf567ab, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8c245dd, org.springframework.security.web.session.SessionManagementFilter@56719aa0, org.springframework.security.web.access.ExceptionTranslationFilter@3a38587d, org.springframework.security.web.access.intercept.AuthorizationFilter@5ab50727]
+16:11:32.067 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] - LiveReload server is running on port 35729
+16:11:32.084 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+16:11:32.092 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java:243] - Tomcat started on port 8080 (http) with context path '/'
+16:11:32.099 [restartedMain] INFO  c.example.runners.RunnersApplication [StartupInfoLogger.java:56] - Started RunnersApplication in 3.475 seconds (process running for 3.955)
+16:11:34.466 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:11:34.466 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:532] - Initializing Servlet 'dispatcherServlet'
+16:11:34.467 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:554] - Completed initialization in 1 ms
+16:11:34.478 [http-nio-8080-exec-2] INFO  c.example.runners.filters.JWTFilter [JWTFilter.java:40] - authorization:Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRoZWRldi5qdW55b3VuZ0BnbWFpbC5jb20iLCJyb2xlIjoiVVNFUiIsImlhdCI6MTcxNzY1NDk5MCwiZXhwIjoxNzE3NjU4NTkwfQ.wWyidV7Z1BE_EOuUdcb8f6AfpP_SK3CwUqkn2y731JU
+16:14:33.687 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [LocalDevToolsAutoConfiguration.java:211] - Restarting due to 10 class path changes (0 additions, 4 deletions, 6 modifications)
+16:14:33.690 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] - Stopping ProtocolHandler ["http-nio-8080"]
+16:14:33.697 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:650] - Closing JPA EntityManagerFactory for persistence unit 'default'
+16:14:33.699 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:349] - HikariPool-1 - Shutdown initiated...
+16:14:33.703 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:351] - HikariPool-1 - Shutdown completed.
+16:14:33.775 [restartedMain] INFO  c.example.runners.RunnersApplication [StartupInfoLogger.java:50] - Starting RunnersApplication using Java 17.0.7 with PID 8729 (/Users/dev_june/Library/Mobile Documents/com~apple~CloudDocs/workspace/Spring-project/build/classes/java/main started by dev_june in /Users/dev_june/Library/Mobile Documents/com~apple~CloudDocs/workspace/Spring-project)
+16:14:33.775 [restartedMain] INFO  c.example.runners.RunnersApplication [SpringApplication.java:655] - No active profile set, falling back to 1 default profile: "default"
+16:14:33.893 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:143] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:14:33.902 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:211] - Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+16:14:33.976 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java:111] - Tomcat initialized with port 8080 (http)
+16:14:33.977 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+16:14:33.977 [restartedMain] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java:173] - Starting service [Tomcat]
+16:14:33.977 [restartedMain] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/10.1.20]
+16:14:33.984 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+16:14:33.985 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:296] - Root WebApplicationContext: initialization completed in 208 ms
+16:14:34.015 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:14:34.017 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [RegionFactoryInitiator.java:50] - HHH000026: Second-level cache disabled
+16:14:34.021 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [SpringPersistenceUnitInfo.java:87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:14:34.022 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:109] - HikariPool-2 - Starting...
+16:14:34.036 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [HikariPool.java:554] - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65de451b
+16:14:34.036 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:122] - HikariPool-2 - Start completed.
+16:14:34.038 [restartedMain] WARN  org.hibernate.orm.deprecation [DialectFactoryImpl.java:153] - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+16:14:34.108 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [JtaPlatformInitiator.java:59] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+16:14:34.144 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:14:34.247 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:236] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:14:34.308 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain [DefaultSecurityFilterChain.java:54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@bc308e2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27b5ace6, org.springframework.security.web.context.SecurityContextHolderFilter@3d50fea4, org.springframework.security.web.header.HeaderWriterFilter@72c2729, org.springframework.web.filter.CorsFilter@3be86793, org.springframework.security.web.authentication.logout.LogoutFilter@1b66e783, com.example.runners.filters.JWTFilter@51899853, com.example.runners.filters.LoginFilter@421e0e98, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bb4657f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4dc71a4f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@484648a1, org.springframework.security.web.session.SessionManagementFilter@9d99e8, org.springframework.security.web.access.ExceptionTranslationFilter@2246868f, org.springframework.security.web.access.intercept.AuthorizationFilter@6611834e]
+16:14:34.362 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] - LiveReload server is running on port 35729
+16:14:34.371 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+16:14:34.372 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java:243] - Tomcat started on port 8080 (http) with context path '/'
+16:14:34.376 [restartedMain] INFO  c.example.runners.RunnersApplication [StartupInfoLogger.java:56] - Started RunnersApplication in 0.62 seconds (process running for 186.232)
+16:14:34.378 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] - Condition evaluation unchanged
+16:15:22.566 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:650] - Closing JPA EntityManagerFactory for persistence unit 'default'
+16:15:22.566 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:349] - HikariPool-2 - Shutdown initiated...
+16:15:22.584 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:351] - HikariPool-2 - Shutdown completed.
+16:19:10.961 [main] INFO  c.example.runners.RunnersApplication [StartupInfoLogger.java:50] - Starting RunnersApplication using Java 17.0.7 with PID 9490 (/Users/dev_june/Library/Mobile Documents/com~apple~CloudDocs/workspace/Spring-project/build/classes/java/main started by dev_june in /Users/dev_june/Library/Mobile Documents/com~apple~CloudDocs/workspace/Spring-project)
+16:19:10.966 [main] INFO  c.example.runners.RunnersApplication [SpringApplication.java:654] - No active profile set, falling back to 1 default profile: "default"
+16:19:11.518 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:143] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:19:11.599 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:211] - Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
+16:19:12.037 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java:111] - Tomcat initialized with port 8080 (http)
+16:19:12.043 [main] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+16:19:12.046 [main] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java:173] - Starting service [Tomcat]
+16:19:12.046 [main] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/10.1.24]
+16:19:12.090 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+16:19:12.090 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:296] - Root WebApplicationContext: initialization completed in 1092 ms
+16:19:12.152 [main] ERROR com.zaxxer.hikari.HikariConfig [HikariConfig.java:490] - Failed to load driver class com.mysql.cj.jdbc.Driver from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7
+16:19:12.153 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [AbstractApplicationContext.java:632] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+16:19:12.156 [main] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java:173] - Stopping service [Tomcat]
+16:19:12.169 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger [ConditionEvaluationReportLogger.java:82] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+16:19:12.179 [main] ERROR o.s.boot.SpringApplication [SpringApplication.java:859] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.runners.RunnersApplication.main(RunnersApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	... 10 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 34 common frames omitted
+Caused by: java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
+	at com.zaxxer.hikari.HikariConfig.setDriverClassName(HikariConfig.java:494)
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperty.set(DataSourceBuilder.java:479)
+	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.set(DataSourceBuilder.java:373)
+	at org.springframework.boot.jdbc.DataSourceBuilder.build(DataSourceBuilder.java:183)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:59)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:117)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 35 common frames omitted
+16:20:28.940 [restartedMain] INFO  c.example.runners.RunnersApplication [StartupInfoLogger.java:50] - Starting RunnersApplication using Java 17.0.7 with PID 9517 (/Users/dev_june/Library/Mobile Documents/com~apple~CloudDocs/workspace/Spring-project/build/classes/java/main started by dev_june in /Users/dev_june/Library/Mobile Documents/com~apple~CloudDocs/workspace/Spring-project)
+16:20:28.941 [restartedMain] INFO  c.example.runners.RunnersApplication [SpringApplication.java:654] - No active profile set, falling back to 1 default profile: "default"
+16:20:28.963 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:252] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+16:20:28.963 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:252] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+16:20:29.381 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:143] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:20:29.414 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:211] - Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
+16:20:29.708 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java:111] - Tomcat initialized with port 8080 (http)
+16:20:29.713 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] - Initializing ProtocolHandler ["http-nio-8080"]
+16:20:29.714 [restartedMain] INFO  o.a.catalina.core.StandardService [DirectJDKLog.java:173] - Starting service [Tomcat]
+16:20:29.714 [restartedMain] INFO  o.a.catalina.core.StandardEngine [DirectJDKLog.java:173] - Starting Servlet engine: [Apache Tomcat/10.1.24]
+16:20:29.739 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java:173] - Initializing Spring embedded WebApplicationContext
+16:20:29.740 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:296] - Root WebApplicationContext: initialization completed in 777 ms
+16:20:29.826 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper [LogHelper.java:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+16:20:29.853 [restartedMain] INFO  org.hibernate.Version [Version.java:44] - HHH000412: Hibernate ORM core version 6.5.2.Final
+16:20:29.869 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator [RegionFactoryInitiator.java:50] - HHH000026: Second-level cache disabled
+16:20:30.035 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo [SpringPersistenceUnitInfo.java:87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+16:20:30.049 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:109] - HikariPool-1 - Starting...
+16:20:30.215 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool [HikariPool.java:554] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3590c9c0
+16:20:30.216 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource [HikariDataSource.java:122] - HikariPool-1 - Start completed.
+16:20:30.263 [restartedMain] WARN  org.hibernate.orm.deprecation [DialectFactoryImpl.java:153] - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+16:20:30.801 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator [JtaPlatformInitiator.java:59] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+16:20:30.871 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16:20:31.210 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory [QueryEnhancerFactory.java:49] - Hibernate is in classpath; If applicable, HQL parser will be used.
+16:20:31.472 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:236] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16:20:31.485 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [InitializeUserDetailsBeanManagerConfigurer.java:113] - Global AuthenticationManager configured with UserDetailsService bean with name userService
+16:20:31.637 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain [DefaultSecurityFilterChain.java:54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@459baf90, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c944c12, org.springframework.security.web.context.SecurityContextHolderFilter@5f669933, org.springframework.security.web.header.HeaderWriterFilter@12e78e4b, org.springframework.web.filter.CorsFilter@5479f830, org.springframework.security.web.authentication.logout.LogoutFilter@49cad914, com.example.runners.filters.JWTFilter@7ad5288f, com.example.runners.filters.LoginFilter@62aaff6a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45df8733, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47eca48b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cb0dbf1, org.springframework.security.web.session.SessionManagementFilter@69dddb50, org.springframework.security.web.access.ExceptionTranslationFilter@3511924a, org.springframework.security.web.access.intercept.AuthorizationFilter@49680ddc]
+16:20:31.783 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] - LiveReload server is running on port 35729
+16:20:31.798 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java:173] - Starting ProtocolHandler ["http-nio-8080"]
+16:20:31.806 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java:243] - Tomcat started on port 8080 (http) with context path '/'
+16:20:31.814 [restartedMain] INFO  c.example.runners.RunnersApplication [StartupInfoLogger.java:56] - Started RunnersApplication in 3.112 seconds (process running for 3.715)
+16:20:37.521 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:20:37.521 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:532] - Initializing Servlet 'dispatcherServlet'
+16:20:37.522 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:554] - Completed initialization in 1 ms
+16:20:37.534 [http-nio-8080-exec-2] INFO  c.example.runners.filters.JWTFilter [JWTFilter.java:40] - authorization:Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRoZWRldi5qdW55b3VuZ0BnbWFpbC5jb20iLCJyb2xlIjoiVVNFUiIsImlhdCI6MTcxNzY1NDk5MCwiZXhwIjoxNzE3NjU4NTkwfQ.wWyidV7Z1BE_EOuUdcb8f6AfpP_SK3CwUqkn2y731JU
+16:20:37.575 [http-nio-8080-exec-2] INFO  c.example.runners.filters.JWTFilter [JWTFilter.java:63] - username:thedev.junyoung@gmail.com
+16:20:37.575 [http-nio-8080-exec-2] INFO  c.example.runners.filters.JWTFilter [JWTFilter.java:64] - role:USER
+16:20:37.576 [http-nio-8080-exec-2] INFO  c.example.runners.filters.JWTFilter [JWTFilter.java:75] - SecurityContextHolder.getContext().getAuthentication()UsernamePasswordAuthenticationToken [Principal=com.example.runners.dto.user.RunnerUserDetails@4ba4e58, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[com.example.runners.dto.user.RunnerUserDetails$1@251dd4f5]]
+16:20:37.587 [http-nio-8080-exec-2] INFO  c.e.r.dto.user.RunnerUserDetails [RunnerUserDetails.java:42] - user.getEmail()thedev.junyoung@gmail.com
+16:20:37.597 [http-nio-8080-exec-2] INFO  c.e.r.dto.user.RunnerUserDetails [RunnerUserDetails.java:42] - user.getEmail()thedev.junyoung@gmail.com

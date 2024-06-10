@@ -19,7 +19,6 @@ public class JoinService {
     }
 
     public void join(JoinRequest joinRequest){
-        System.out.println("join() in JoinService"+joinRequest.toString());
         if(userRepository.existsByEmail(joinRequest.getEmail())){
             System.out.println("existsByUsername: return in JoinService");
             return;

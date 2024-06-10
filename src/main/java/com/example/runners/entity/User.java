@@ -5,21 +5,25 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
 @Getter
 @Setter
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id", nullable = false)
     private Long userId;
+
     @Column(name = "email", nullable = false, unique = true)
     private String email;
+
     @Column(name = "password", nullable = false)
     private String password;
+
     @Column(name = "username", nullable = false)
     private String username;
 
@@ -27,38 +31,37 @@ public class User {
     private Role role;
 
     private String profileMsg;
-    private String profileImg; //
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createdAt;
+    private String profileImg;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date updatedAt;
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
 
-    // 1:N 관계,
-    // FetchType.LAZY: 실제로 해당 필드가 필요할 때까지 로드되지 않음.
-    // 유저는 여러개의 챌린지에 참여할 수 있다.
+    @Column(name = "updated_at")
+    private LocalDateTime updatedAt;
+
+    // 1:N 관계 - 유저는 여러 개의 챌린지에 참여할 수 있다.
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<ChallengeUser> challenges;
+    private Set<ChallengeUser> challengeUser;
 
-    @OneToMany(mappedBy = "createdBy", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    // 1:N 관계 - 유저는 여러 개의 챌린지를 생성할 수 있다.
+    @OneToMany(mappedBy = "userId", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Challenge> createdChallenges;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<ChallengeReply> challengeReplies;
+    // 1:N 관계 - 유저는 챌린지에 댓글을 다수 생성할 수 있다.
+//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+//    private Set<ChallengeReply> challengeReplies;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<RunningRecord> runningRecords;
-
-
+    // 1:N 관계 - 유저는 다수의 러닝 기록을 기록한다.
+//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+//    private Set<RunningRecord> runningRecords;
 
     @PrePersist
     protected void onCreate() {
-        createdAt = new Date();
+        createdAt = LocalDateTime.now();
     }
 
     @PreUpdate
     protected void onUpdate() {
-        updatedAt = new Date();
+        updatedAt = LocalDateTime.now();
     }
-
 }

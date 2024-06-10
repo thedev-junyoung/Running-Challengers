@@ -1,6 +1,5 @@
 package com.example.runners.dto.challengeuser;
 
-import com.example.runners.entity.ChallengeUser;
 import lombok.Data;
 
 import java.io.Serializable;

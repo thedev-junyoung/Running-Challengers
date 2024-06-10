@@ -18,8 +18,6 @@ import java.util.List;
 public class UserController {
     private final UserService userService;
 
-    private static final Logger logger = LoggerFactory.getLogger(ChallengeController.class);
-
     public UserController(JoinService joinService, UserService userService) {
         this.userService = userService;
     }

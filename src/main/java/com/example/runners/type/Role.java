@@ -1,4 +1,4 @@
-package com.example.runners.entity;
+package com.example.runners.type;
 
 public enum Role {
     USER, // 일반 사용자

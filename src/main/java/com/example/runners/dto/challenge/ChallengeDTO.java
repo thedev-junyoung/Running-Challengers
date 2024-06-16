@@ -13,6 +13,6 @@ public class ChallengeDTO {
     private String description;
     private int goalAmount;
     private String goalUnit;
-    private int createdBy; // 작성자
+    private long createdBy; // 작성자
     private Date deadline;
 }

@@ -1,6 +1,9 @@
 package com.example.runners.utils;
 
+import com.example.runners.filters.JWTFilter;
 import io.jsonwebtoken.Jwts;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.beans.factory.annotation.Value;
 
@@ -11,6 +14,7 @@ import java.util.Date;
 
 @Component
 public class JWT {
+    private static final Logger logger = LoggerFactory.getLogger(JWT.class);
 
     private SecretKey secretKey;
 
@@ -55,7 +59,7 @@ public class JWT {
     }
 
     public String createJwt(String username, String role, Long expiredMs) {
-        System.out.println("createJwt() in JWT");
+        logger.info("");
         return Jwts.builder()
                 .claim("username", username)
                 .claim("role", role)

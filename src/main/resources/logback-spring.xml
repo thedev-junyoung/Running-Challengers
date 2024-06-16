@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <property name="LOG_PATH" value="logs"/>
+    <property name="CUSTOM_LOG_FILE" value="${LOG_PATH}/custom-logs.log"/>
+
+    <!-- Console Appender with Color, Line Number and Method Name -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) %logger{36} [%file:%line] [%M] - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!-- File Appender for Custom Logs -->
+    <appender name="CUSTOM_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${CUSTOM_LOG_FILE}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/custom-logs-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} [%file:%line] [%M] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Logger for Custom Logs -->
+    <logger name="CustomLogger" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="CUSTOM_FILE"/>
+    </logger>
+
+    <!-- Root Logger -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>

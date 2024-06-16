@@ -1,7 +1,7 @@
 package com.example.runners.service;
 
 import com.example.runners.dto.user.JoinRequest;
-import com.example.runners.entity.Role;
+import com.example.runners.type.Role;
 import com.example.runners.entity.User;
 import com.example.runners.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -19,8 +19,7 @@ public class JoinService {
     }
 
     public void join(JoinRequest joinRequest){
-        System.out.println("join() in JoinService");
-        if(userRepository.existsByUsername(joinRequest.getUsername())){
+        if(userRepository.existsByEmail(joinRequest.getEmail())){
             System.out.println("existsByUsername: return in JoinService");
             return;
         }
@@ -28,6 +27,7 @@ public class JoinService {
         User user = new User();
         String password = joinRequest.getPassword();
         user.setUsername(joinRequest.getUsername());
+        user.setEmail(joinRequest.getEmail());
         user.setPassword(bCryptPasswordEncoder.encode(password));
         if(joinRequest.getUsername().equals("admin") || joinRequest.getUsername().equals("junyoung")){
             user.setRole(Role.ADMIN); // 3. ADMIN / USER 권한 추가

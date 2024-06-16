@@ -1,17 +1,22 @@
 package com.example.runners.controller;
 
+import com.example.runners.dto.user.JoinRequest;
+import com.example.runners.dto.user.RunnerUserDetails;
 import com.example.runners.repository.UserRepository;
+import com.example.runners.service.JoinService;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
-@ResponseBody
+@RestController
 public class MainController {
     // 4. ERD, Function 짜오세요.
+    private final JoinService joinService;
+
+    public MainController(JoinService joinService) {
+        this.joinService = joinService;
+    }
 
     @GetMapping("/")
     public String getMain() {
@@ -25,9 +30,20 @@ public class MainController {
         if (auth == null || !auth.isAuthenticated()) {
             return "User is not authenticated";
         }
+        RunnerUserDetails runnerUserDetails=(RunnerUserDetails)auth.getPrincipal();
         String name = auth.getName();
         return "test page : " + name;
     }
+    @PostMapping("/join")
+    public String join(@RequestBody JoinRequest joinRequest){
+        joinService.join(joinRequest);
+        return "join complete!";
+    }
+    @GetMapping("/join")
+    public String join(){
+        return "get join view";
+    }
+
 
 
 }

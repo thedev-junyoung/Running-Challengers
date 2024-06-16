@@ -1,6 +1,6 @@
 package com.example.runners.dto.user;
 
-import com.example.runners.entity.Role;
+import com.example.runners.type.Role;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -12,12 +12,12 @@ import java.util.Set;
  */
 @Data
 public class UserDTO implements Serializable {
-    int id;
+    Long userId;
     String email;
     String username;
     Role role;
     String profileMsg;
     String profileImg;
     Date createdAt;
-    Set<ChallengeParticipantDTO> challenges;
+    //Set<ChallengeUserDTO> challenges;
 }
